@@ -1,10 +1,9 @@
- INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
-
-
-
+ # EXPERIMENT NO 2 - INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
+## Name : Shehan Shajahan
+## Register Number : 212223240154
+## Department : Artificial Intelliegnce and Machine Learning
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
-
 
 **COMPONENTS REQUIRED:**
 1.	10 KΩPOT
@@ -67,27 +66,44 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```
+int pot;
+int led=7;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+ pot=analogRead(A0);
+ //Serial.print("Value=");
+ Serial.println(pot);
+ if(pot>900)
+ {
+ digitalWrite(LED_BUILTIN, HIGH);
+ delay(1000);
+ digitalWrite(LED_BUILTIN, LOW);
+ delay(1000);
+ }
+ else
+ { digitalWrite(led,LOW);
+  delay(500);
+ }
+}
+```
+### Figure No. 2:
+![Screenshot 2024-02-23 155158](https://github.com/shehanshajahan/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/139317389/5eaa91ad-3619-44ce-a64e-204a759828ed)
+
+## Simulation output:
+### Figure No. 3: ON Condition:
+![Screenshot 2024-02-23 155736](https://github.com/shehanshajahan/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/139317389/cdaf31d3-01e5-424d-a77a-5cf629fd199a)
+
+### Figure No. 4: OFF Condition:
+![Screenshot 2024-02-23 154552](https://github.com/shehanshajahan/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/139317389/1742ff21-2a10-4343-bd36-b0ca2d153241)
+
+### Figure No. 5:  Schematic Simulation:
+![Screenshot 2024-02-23 160927](https://github.com/shehanshajahan/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/139317389/09867568-3dfc-4909-8f5f-b6ee9902fcc6)
 
 
-
-
-
-
-
-
-
-**
-**Simulation output:** 
-**
-
-
-[My image](username.github.com/repository/img/image.jpg)
-
-
-
-
-
-
-
-**RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
+## RESULT: Arduino uno analog input functioning is learned and interfaced with digital input switch .
