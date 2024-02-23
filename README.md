@@ -2,7 +2,7 @@
 ## Name : Shehan Shajahan
 ## Register Number : 212223240154
 ## Department : Artificial Intelliegnce and Machine Learning
-
+## Date : 23/02/2024
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
 **COMPONENTS REQUIRED:**
@@ -13,7 +13,6 @@
 5.	Connecting wires 
 6.	LED of choice 
 **
-
 
 **THEORY**: 
 
